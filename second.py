@@ -185,7 +185,7 @@ class manager(stock):
         windo = self.windo
         windo.title("Update")
         windo.iconbitmap("D:\stockmanager\ic.ico")
-        windo.geometry("1024x520+0+0")
+        windo.geometry("1024x520")
         windo.config(bg="gray")
         title = Label(windo, text="ADD TO DATABASE", font=("Times New Roman", 30), bg="seagreen", fg="white", bd=5,
                       relief=GROOVE, width=50, pady=2).pack()
