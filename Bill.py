@@ -3,9 +3,11 @@ import tkinter.messagebox
 import sqlite3
 import os
 
-db = sqlite3.connect("D:\stockmanager\Database\stock_manager.db")
-c = db.cursor()
-
+try:
+    db = sqlite3.connect("D:\stockmanager\Database\stock_manager.db")
+    c = db.cursor()
+except:
+    print("database not available")
 product_list = []
 price_list = []
 QTY_list = []
@@ -23,7 +25,6 @@ def back():
 def exit():
     tkinter.messagebox.showinfo("Exit", "Do you really wanna Exit?")
     root.destroy()
-
 
 
 class bill:

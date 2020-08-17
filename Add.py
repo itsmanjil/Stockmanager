@@ -3,9 +3,12 @@ import tkinter.messagebox
 import sqlite3
 import os
 
-db = sqlite3.connect("D:\stockmanager\Database\stock_manager.db")
-c = db.cursor()
-
+try:
+    db = sqlite3.connect("D:\stockmanager\Database\stock_manager.db")
+    c = db.cursor()
+except:
+    print(" database not available")
+    
 result = c.execute("select max(id) from stock_manager")
 for r in result:
     id = r[0]
